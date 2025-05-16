@@ -68,7 +68,7 @@ async function colorizeLoadedMap(sourceImage, imageType) {
 
                 // --- Apply Robust Color Logic based on Blue Channel ---
                 // Use ranges and check alpha for water
-                if (a < 20 || (b >= 104 && b <= 108)) { // Water
+                if (b >= 104 && b <= 108) { // Water
                     newR = waterColor.r; newG = waterColor.g; newB = waterColor.b;
                 } else if (b <= 140) { // Plains (Base)
                     newR = plainsBaseColor.r; newG = plainsBaseColor.g; newB = plainsBaseColor.b;
